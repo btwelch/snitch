@@ -11,7 +11,8 @@ router.post('/snitch', function(req, res) {
     defaults: {
       name: req.body.name,
       ip: req.body.ip,
-      branch: req.body.branch,
+      restapi_branch: req.body.restapi_branch,
+      bravestorm_branch: req.body.bravestorm_branch,
       status: req.body.status
     }
   })
@@ -20,7 +21,8 @@ router.post('/snitch', function(req, res) {
       server.update({
         name: req.body.name,
         ip: req.body.ip,
-        branch: req.body.branch,
+        restapi_branch: req.body.restapi_branch,
+        bravestorm_branch: req.body.bravestorm_branch,
         status: req.body.status
       }).then(function () {
         res.redirect("/");

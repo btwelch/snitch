@@ -11,7 +11,8 @@ module.exports = {
         },
         name:   Sequelize.STRING,
         ip:     Sequelize.STRING,
-        branch: Sequelize.STRING,
+        restapi_branch: Sequelize.STRING,
+        bravestorm_branch: Sequelize.STRING,
         status: Sequelize.STRING,
         createdAt: {
           type: Sequelize.DATE
