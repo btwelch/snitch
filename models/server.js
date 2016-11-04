@@ -6,7 +6,9 @@ module.exports = function(sequelize, DataTypes) {
     ip: DataTypes.STRING,
     restapi_branch: DataTypes.STRING,
     bravestorm_branch: DataTypes.STRING,
-    status: DataTypes.STRING
+    status: DataTypes.STRING,
+    order: DataTypes.INTEGER,
+    group: DataTypes.INTEGER
   });
 
   return Server;

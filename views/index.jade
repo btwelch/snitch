@@ -15,11 +15,23 @@ block content
 
   h2 Dev Server
 
-  each server in servers
-    div
-      h2
-        = server.name
-      p
-        = "REST API branch: " + server.restapi_branch
-      p
-        = "Bravestorm branch: " + server.bravestorm_branch
+  table
+    each server in group1_servers
+      tr
+        td
+          h2
+            = server.name
+          p
+            = "REST API branch: " + server.restapi_branch
+          p
+            = "Bravestorm branch: " + server.bravestorm_branch
+    
+    each server in group2_servers
+      tr
+        td
+          h2
+            = server.name
+          p
+            = "REST API branch: " + server.restapi_branch
+          p
+            = "Bravestorm branch: " + server.bravestorm_branch
