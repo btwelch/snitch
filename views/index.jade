@@ -3,14 +3,15 @@ extends layout
 block content
   h1= title
 
-  h2 Creating a new server
-  form(action="/servers/snitch", method="post")
-    input(type="text", name="name")
-    input(type="text", name="ip")
-    input(type="text", name="restapi_branch")
-    input(type="text", name="bravestorm_branch")
-    input(type="text", name="status")
-    input(type="submit")
+  //-
+    h2 Creating a new server
+    form(action="/servers/snitch", method="post")
+      input(type="text", name="name")
+      input(type="text", name="ip")
+      input(type="text", name="restapi_branch")
+      input(type="text", name="bravestorm_branch")
+      input(type="text", name="status")
+      input(type="submit")
 
   h2 Dev Server
 
