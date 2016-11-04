@@ -1,8 +1,6 @@
 extends layout
 
 block content
-  h1= title
-
   //-
     h2 Creating a new server
     form(action="/servers/snitch", method="post")
@@ -13,7 +11,12 @@ block content
       input(type="text", name="status")
       input(type="submit")
 
-  h2 Dev Server
+  table
+    tr 
+      td
+        img(src="/images/SnitchLogo.png" style='height: 120px;')
+      td
+        p(style='font-size: 22px') Dev server tattle-tale
 
   table
     each server in group1_servers
