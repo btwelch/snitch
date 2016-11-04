@@ -42,23 +42,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
-var https = require('https');
-var fs = require('fs');
-
-var sslkey = fs.readFileSync('./certs/private.key');
-var sslcert = fs.readFileSync('./certs/public.cert')
-
-var options = {
-    key: sslkey,
-    cert: sslcert
-};
-
-express.createServer(options);
-
-//app.listen(3003, "0.0.0.0", function () {
-//  console.log('Snitch listening on port 3003!')
-//});
-
+app.listen(3003, "0.0.0.0", function () {
+  console.log('Snitch listening on port 3003!')
+});
 
 module.exports = app;
