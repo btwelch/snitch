@@ -4,7 +4,7 @@ module.exports = {
   up: function(queryInterface, Sequelize) {
     return queryInterface.addColumn(
       'Servers',
-      'order',
+      'server_order',
       Sequelize.INTEGER
     )
   }

@@ -14,8 +14,8 @@ router.post('/snitch', function(req, res) {
       restapi_branch: req.body.restapi_branch,
       bravestorm_branch: req.body.bravestorm_branch,
       status: req.body.status,
-      order: req.body.order,
-      group: req.body.group
+      server_order: req.body.order,
+      server_group: req.body.group
     }
   })
   .spread(function(server, created) {
@@ -26,8 +26,8 @@ router.post('/snitch', function(req, res) {
         restapi_branch: req.body.restapi_branch,
         bravestorm_branch: req.body.bravestorm_branch,
         status: req.body.status,
-        order: req.body.order,
-        group: req.body.group
+        server_order: req.body.order,
+        server_group: req.body.group
       }).then(function () {
         res.redirect("/");
       });

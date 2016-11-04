@@ -7,8 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     restapi_branch: DataTypes.STRING,
     bravestorm_branch: DataTypes.STRING,
     status: DataTypes.STRING,
-    order: DataTypes.INTEGER,
-    group: DataTypes.INTEGER
+    server_order: DataTypes.INTEGER,
+    server_group: DataTypes.INTEGER
   });
 
   return Server;
