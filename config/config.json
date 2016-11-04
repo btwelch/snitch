@@ -7,11 +7,8 @@
     "dialect": "sqlite",
     "storage": ":memory:"
   },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": null,
-    "dialect": "postgres"
+  production: {
+    use_env_variable: 'DATABASE_URL',
+    dialect: 'postgres'
   }
 }
