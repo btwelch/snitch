@@ -1,9 +1,14 @@
+var models  = require('../models');
 var express = require('express');
-var router = express.Router();
+var router  = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', function(req, res) {
+  models.Server.findAll().then(function(servers) {
+     res.render('index', {
+       title: 'Snitch',
+       servers: servers
+     });
+   });
 });
 
 module.exports = router;
