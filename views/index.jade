@@ -19,19 +19,18 @@ block content
         p(style='font-size: 22px') Dev server tattle-tale
 
   table
-    each server in group1_servers
-      tr
-        td
+    tr
+      td
+        each server in group1_servers
           h2
             = server.name
           p
             = "REST API branch: " + server.restapi_branch
           p
             = "Bravestorm branch: " + server.bravestorm_branch
-    
-    each server in group2_servers
-      tr
-        td
+
+      td
+        each server in group2_servers
           h2
             = server.name
           p
